@@ -82,8 +82,8 @@ func main() {
 	mux.HandleFunc("GET /cards", getCards)
 	mux.HandleFunc("GET /cards/{id}", getCard)
 	mux.HandleFunc("POST /cards", createCard)
-	mux.HandleFunc("DELETE /cards/{id}", deleteCard)
-	mux.HandleFunc("PUT /cards/{id}", updateCard)
+	// mux.HandleFunc("DELETE /cards/{id}", deleteCard)
+	// mux.HandleFunc("PUT /cards/{id}", updateCard)
 
 	mux.HandleFunc("GET /", serverStatus)
 
