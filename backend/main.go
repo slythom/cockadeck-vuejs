@@ -35,11 +35,12 @@ func createCard(w http.ResponseWriter, r *http.Request) {
 		card.ID = strconv.Itoa(len(cards) + 1)
 	}
 
-	_, exists := cards[card.ID]
-	if exists {
-		http.Error(w, "Card already exists", http.StatusConflict)
-		return
-	}
+	// DELETE?
+	// _, exists := cards[card.ID]
+	// if exists {
+	// 	http.Error(w, "Card already exists", http.StatusConflict)
+	// 	return
+	// }
 
 	cards[card.ID] = card
 
